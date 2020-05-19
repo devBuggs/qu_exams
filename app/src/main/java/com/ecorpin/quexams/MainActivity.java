@@ -8,17 +8,17 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
     Animation header_anim;
 
-    Button discoverBtn;
-    Button erpBtn;
-    Button examBtn;
-    Button resultBtn;
+    ImageButton discoverBtn;
+    ImageButton erpBtn;
+    ImageButton examBtn;
+    ImageButton resultBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,15 @@ public class MainActivity extends AppCompatActivity {
         header_anim = AnimationUtils.loadAnimation(this, R.anim.up_to_down_anim);
         header.setAnimation(header_anim);
 
-        discoverBtn = (Button) findViewById(R.id.discover);
+        header.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ReferenceActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        discoverBtn = (ImageButton) findViewById(R.id.discover);
         discoverBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        erpBtn = (Button) findViewById(R.id.erp);
+        erpBtn = (ImageButton) findViewById(R.id.erp);
         erpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        examBtn = (Button) findViewById(R.id.exam);
+        examBtn = (ImageButton) findViewById(R.id.exam);
         examBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        resultBtn = (Button) findViewById(R.id.result);
+        resultBtn = (ImageButton) findViewById(R.id.result);
         resultBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

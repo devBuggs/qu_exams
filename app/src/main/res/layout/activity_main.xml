@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
@@ -10,85 +11,129 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
+        android:contentDescription="@string/dashboard_hint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/header_test" />
 
-    <Button
+    <ImageButton
         android:id="@+id/discover"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
         android:layout_weight="1"
-        android:text="@string/discoverBtn"
-        android:textAlignment="center"
-        android:textColor="@color/colorAccent"
-        android:textSize="22sp"
-        android:textStyle="bold|italic"
+        android:background="@color/colorPrimary"
+        android:contentDescription="@string/dashboard_hint"
+        android:src="@drawable/ic_discover"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/result"
         app:layout_constraintEnd_toStartOf="@+id/erp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/app_header" />
 
-    <Button
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:text="@string/discoverBtn"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/discover"
+        app:layout_constraintEnd_toEndOf="@+id/discover"
+        app:layout_constraintStart_toStartOf="@+id/discover"
+        app:layout_constraintTop_toBottomOf="@+id/discover" />
+
+    <ImageButton
         android:id="@+id/erp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/erpBtn"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@color/colorAccent"
-        android:textSize="22sp"
-        android:textStyle="bold|italic"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorPrimary"
+        android:contentDescription="@string/dashboard_hint"
+        android:src="@drawable/ic_erp"
         app:layout_constraintBottom_toTopOf="@+id/exam"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/discover"
         app:layout_constraintTop_toBottomOf="@+id/app_header" />
 
-    <Button
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/erpBtn"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/erp"
+        app:layout_constraintEnd_toEndOf="@+id/erp"
+        app:layout_constraintStart_toStartOf="@+id/erp"
+        app:layout_constraintTop_toBottomOf="@+id/erp" />
+
+    <ImageButton
         android:id="@+id/exam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/examBtn"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@color/colorAccent"
-        android:textSize="22sp"
-        android:textStyle="bold|italic"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorPrimary"
+        android:contentDescription="@string/dashboard_hint"
+        android:src="@drawable/ic_exam"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/result"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/discover" />
 
-    <Button
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/examBtn"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/exam"
+        app:layout_constraintEnd_toEndOf="@+id/exam"
+        app:layout_constraintStart_toStartOf="@+id/exam"
+        app:layout_constraintTop_toBottomOf="@+id/exam"
+        app:layout_constraintVertical_bias="0.162" />
+
+    <ImageButton
         android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/resultBtn"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@color/colorAccent"
-        android:textSize="22sp"
-        android:textStyle="bold|italic"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorPrimary"
+        android:contentDescription="@string/dashboard_hint"
+        android:src="@drawable/ic_results"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/exam"
         app:layout_constraintTop_toBottomOf="@+id/erp" />
 
-    <ImageView
-        android:id="@+id/log"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginEnd="4dp"
-        android:src="@drawable/log"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:text="@string/resultBtn"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/result"
+        app:layout_constraintEnd_toEndOf="@+id/result"
+        app:layout_constraintStart_toStartOf="@+id/result"
+        app:layout_constraintTop_toBottomOf="@+id/result" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

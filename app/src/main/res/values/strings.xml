@@ -4,7 +4,12 @@
     <!-- Application menu buttons -->
     <string name="discoverBtn">Discover</string>
     <string name="erpBtn">Q-ERP</string>
-    <string name="examBtn">Q-Exam</string>
-    <string name="resultBtn">Q-Result</string>
+    <string name="examBtn">Q-Quiz</string>
+    <string name="resultBtn">Result</string>
+
+    <string name="dashboard_hint">hint</string>
+
+    <string name="devMsg">Designed and Developed at Ecorpin Lab.</string>
+    <string name="version">v2.7</string>
 
 </resources>
